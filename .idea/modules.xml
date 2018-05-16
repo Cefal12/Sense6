@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Sense5-master.iml" filepath="$PROJECT_DIR$/Sense5-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Android\Sense5-master\Sense5-master\app\app.iml" filepath="C:\Android\Sense5-master\Sense5-master\app\app.iml" />
+      <module fileurl="file://C:\Android\sense3-master (2)\sense3-master\database2.iml" filepath="C:\Android\sense3-master (2)\sense3-master\database2.iml" />
+      <module fileurl="file://C:\Android\Sense5-master\Sense5-master\sense3-master.iml" filepath="C:\Android\Sense5-master\Sense5-master\sense3-master.iml" />
+    </modules>
+  </component>
+</project>
