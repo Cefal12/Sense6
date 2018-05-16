@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
@@ -33,6 +34,7 @@ import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.sql.Blob;
 import java.util.Date;
 
 
@@ -77,6 +79,7 @@ public class AddMadFragment extends Fragment {
         imageView = (ImageView) view.findViewById(R.id.img_imageView);
         BnTilbageMad = view.findViewById(R.id.bn_tilbage_add);
 
+
         BnTilbageMad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -95,6 +98,11 @@ public class AddMadFragment extends Fragment {
                 String hf4 = HF4.getText().toString();
                 String Fedt = fedt.getText().toString();
 
+                Bitmap foto = ((BitmapDrawable) imageView.getDrawable()).getBitmap();
+                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                foto.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+                byte[] imageInByte = baos.toByteArray();
+
 
                 Mad mad = new Mad();
                 mad.setHF12(hf12);
@@ -102,6 +110,7 @@ public class AddMadFragment extends Fragment {
                 mad.setHF4(hf4);
                 mad.setFedt(Fedt);
                 mad.setDato(datoString);
+                mad.setFoto(imageInByte);
 
 
                 /*imageView.setDrawingCacheEnabled(true);
@@ -185,6 +194,8 @@ public class AddMadFragment extends Fragment {
         }
 
     }
+
+
 
 
     // TODO: Rename method, update argument and hook method into UI event

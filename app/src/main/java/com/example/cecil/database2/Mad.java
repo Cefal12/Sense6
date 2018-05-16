@@ -37,7 +37,7 @@ public class Mad
     @ColumnInfo (name = "fedt")
     private String fedt;
 
-    @ColumnInfo (typeAffinity = ColumnInfo.BLOB)
+    @ColumnInfo(typeAffinity = ColumnInfo.BLOB)
     private byte[] foto;
 
     public byte[] getFoto() {
